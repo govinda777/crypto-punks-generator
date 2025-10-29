@@ -130,6 +130,11 @@ Os CryptoPunks originais utilizam especificações muito específicas:
 - **Rendering**: CSS `image-rendering: pixelated` para manter nitidez
 
 ### Distribuição de Tipos
+
+<p align="center">
+  <img src="CryptoPunks-Distribution-by-Type.png" alt="CryptoPunks Generator Banner" width="100%">
+</p>
+
 Os 10.000 CryptoPunks originais estão distribuídos em 5 tipos com raridades diferentes:[10][11][12][13]
 
 | Tipo | Quantidade | Porcentagem | Raridade |
