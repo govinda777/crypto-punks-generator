@@ -1,0 +1,150 @@
+<svg width="1200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definições de gradientes e filtros -->
+  <defs>
+    <!-- Gradiente de fundo cyberpunk -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a1a3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f23;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Gradiente neon para texto -->
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00fff7;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff00e7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00fff7;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Efeito de brilho neon -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Efeito de sombra -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="1200" height="300" fill="url(#bgGradient)"/>
+
+  <!-- Grid de fundo cyberpunk -->
+  <g opacity="0.1">
+    <line x1="0" y1="50" x2="1200" y2="50" stroke="#00fff7" stroke-width="1"/>
+    <line x1="0" y1="100" x2="1200" y2="100" stroke="#00fff7" stroke-width="1"/>
+    <line x1="0" y1="150" x2="1200" y2="150" stroke="#00fff7" stroke-width="1"/>
+    <line x1="0" y1="200" x2="1200" y2="200" stroke="#00fff7" stroke-width="1"/>
+    <line x1="0" y1="250" x2="1200" y2="250" stroke="#00fff7" stroke-width="1"/>
+    <line x1="200" y1="0" x2="200" y2="300" stroke="#ff00e7" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="300" stroke="#ff00e7" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="300" stroke="#ff00e7" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="300" stroke="#ff00e7" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="300" stroke="#ff00e7" stroke-width="1"/>
+  </g>
+
+  <!-- Pixel art punk characters (5 exemplos) -->
+  <!-- Punk 1 - Alien (azul) -->
+  <g transform="translate(100, 80)">
+    <rect x="0" y="8" width="48" height="64" fill="#7090c0" opacity="0.9"/>
+    <rect x="8" y="0" width="32" height="8" fill="#202020"/>
+    <rect x="12" y="24" width="8" height="8" fill="#000000"/>
+    <rect x="28" y="24" width="8" height="8" fill="#000000"/>
+    <rect x="16" y="40" width="16" height="4" fill="#000000"/>
+  </g>
+
+  <!-- Punk 2 - Female com cabelo rosa -->
+  <g transform="translate(200, 80)">
+    <rect x="0" y="8" width="48" height="64" fill="#f0d0b0" opacity="0.9"/>
+    <rect x="8" y="0" width="32" height="12" fill="#ff00e7"/>
+    <rect x="12" y="24" width="8" height="8" fill="#604030"/>
+    <rect x="28" y="24" width="8" height="8" fill="#604030"/>
+    <rect x="16" y="40" width="16" height="4" fill="#ff0055"/>
+  </g>
+
+  <!-- Punk 3 - Male com mohawk -->
+  <g transform="translate(300, 80)">
+    <rect x="0" y="8" width="48" height="64" fill="#d0a080" opacity="0.9"/>
+    <rect x="16" y="0" width="16" height="16" fill="#c04040"/>
+    <rect x="12" y="24" width="8" height="8" fill="#202020"/>
+    <rect x="28" y="24" width="8" height="8" fill="#202020"/>
+    <rect x="20" y="32" width="20" height="8" fill="#4060c0"/>
+  </g>
+
+  <!-- Punk 4 - Zombie -->
+  <g transform="translate(850, 80)">
+    <rect x="0" y="8" width="48" height="64" fill="#70a080" opacity="0.9"/>
+    <rect x="8" y="0" width="32" height="8" fill="#604030"/>
+    <rect x="12" y="24" width="8" height="8" fill="#ff0000"/>
+    <rect x="28" y="24" width="8" height="8" fill="#ff0000"/>
+    <rect x="16" y="40" width="16" height="4" fill="#000000"/>
+  </g>
+
+  <!-- Punk 5 - Ape -->
+  <g transform="translate(950, 80)">
+    <rect x="0" y="8" width="48" height="64" fill="#8b6540" opacity="0.9"/>
+    <rect x="8" y="0" width="32" height="8" fill="#604030"/>
+    <rect x="12" y="24" width="8" height="8" fill="#000000"/>
+    <rect x="28" y="24" width="8" height="8" fill="#000000"/>
+    <rect x="20" y="28" width="24" height="8" fill="#ffd700"/>
+  </g>
+
+  <!-- Título principal -->
+  <text x="600" y="120" 
+        font-family="'Courier New', monospace" 
+        font-size="72" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="url(#neonGradient)"
+        filter="url(#glow)">
+    CRYPTOPUNKS
+  </text>
+
+  <!-- Subtítulo -->
+  <text x="600" y="165" 
+        font-family="'Courier New', monospace" 
+        font-size="48" 
+        font-weight="bold" 
+        text-anchor="middle" 
+        fill="#00fff7"
+        filter="url(#glow)">
+    GENERATOR
+  </text>
+
+  <!-- Tagline -->
+  <text x="600" y="200" 
+        font-family="'Courier New', monospace" 
+        font-size="18" 
+        text-anchor="middle" 
+        fill="#ffffff"
+        opacity="0.8">
+    Create Unique NFT Avatars with Layered Pixel Art
+  </text>
+
+  <!-- Badge/Tag decorativo -->
+  <g transform="translate(500, 220)">
+    <rect x="0" y="0" width="200" height="30" fill="#ff00e7" opacity="0.2" rx="15"/>
+    <text x="100" y="20" 
+          font-family="'Courier New', monospace" 
+          font-size="14" 
+          font-weight="bold"
+          text-anchor="middle" 
+          fill="#ff00e7">
+      ⚡ OPEN SOURCE ⚡
+    </text>
+  </g>
+
+  <!-- Elementos decorativos - pontos brilhantes -->
+  <circle cx="80" cy="50" r="3" fill="#00fff7" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="1120" cy="50" r="3" fill="#ff00e7" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="80" cy="250" r="3" fill="#ffd500" opacity="0.8" filter="url(#glow)"/>
+  <circle cx="1120" cy="250" r="3" fill="#00ff90" opacity="0.8" filter="url(#glow)"/>
+
+  <!-- Linhas decorativas -->
+  <line x1="400" y1="230" x2="480" y2="230" stroke="#00fff7" stroke-width="2" opacity="0.5"/>
+  <line x1="720" y1="230" x2="800" y2="230" stroke="#ff00e7" stroke-width="2" opacity="0.5"/>
+</svg>
