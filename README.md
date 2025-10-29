@@ -1,6 +1,8 @@
 # CryptoPunks Generator
 
-<img src="https://raw.githubusercontent.com/govinda777/crypto-punks-generator/main/assets/banner.png" alt="crypto-punks-generator" width="600">
+<p align="center">
+  <img src="banner.svg" alt="CryptoPunks Generator Banner" width="100%">
+</p>
 
 [perplexity](https://www.perplexity.ai/search/crie-um-sistema-que-faca-a-cri-8dyiGmBZTGaS5R6V4RTANA#0)
 
