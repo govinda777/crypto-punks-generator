@@ -1,0 +1,98 @@
+{
+  "canvas_size": "24x24 pixels",
+  "total_collection": 10000,
+  "total_attributes": 87,
+  "types": {
+    "Male": {
+      "count": 6039,
+      "percentage": 60.39
+    },
+    "Female": {
+      "count": 3840,
+      "percentage": 38.4
+    },
+    "Zombie": {
+      "count": 88,
+      "percentage": 0.88
+    },
+    "Ape": {
+      "count": 24,
+      "percentage": 0.24
+    },
+    "Alien": {
+      "count": 9,
+      "percentage": 0.09
+    }
+  },
+  "layer_system": {
+    "Layer 1 - Base/Background": "Background color or gradient",
+    "Layer 2 - Face/Type": "Base character type (Male, Female, Alien, Ape, Zombie) with skin tone",
+    "Layer 3 - Hair": "Various hairstyles (Mohawk, Wild Hair, Messy Hair, etc.)",
+    "Layer 4 - Eyes": "Eye accessories (3D Glasses, VR, Regular Shades, etc.)",
+    "Layer 5 - Facial Hair": "Beards and mustaches (for male types)",
+    "Layer 6 - Mouth/Lips": "Lipstick colors, smile, frown, cigarette, pipe",
+    "Layer 7 - Head Accessories": "Hats, beanies, headbands, etc.",
+    "Layer 8 - Other Accessories": "Earrings, necklaces, etc."
+  },
+  "sample_attributes": {
+    "Hair": [
+      "Mohawk",
+      "Wild Hair",
+      "Messy Hair",
+      "Blonde Bob",
+      "Red Mohawk",
+      "Wild White Hair",
+      "Vampire Hair"
+    ],
+    "Eyes": [
+      "3D Glasses",
+      "VR",
+      "Regular Shades",
+      "Classic Shades",
+      "Big Shades",
+      "Nerd Glasses"
+    ],
+    "Facial Hair": [
+      "Big Beard",
+      "Luxurious Beard",
+      "Normal Beard",
+      "Mustache",
+      "Goat",
+      "Muttonchops"
+    ],
+    "Mouth": [
+      "Cigarette",
+      "Pipe",
+      "Smile",
+      "Frown",
+      "Hot Lipstick",
+      "Purple Lipstick",
+      "Black Lipstick"
+    ],
+    "Head Accessories": [
+      "Beanie",
+      "Top Hat",
+      "Cowboy Hat",
+      "Cap",
+      "Hoodie",
+      "Headband",
+      "Tiara"
+    ],
+    "Accessories": [
+      "Earring",
+      "Gold Chain",
+      "Silver Chain",
+      "Choker"
+    ]
+  },
+  "rarity_distribution": {
+    "0_attributes": 8,
+    "1_attribute": 333,
+    "2_attributes": 3560,
+    "3_attributes": 4501,
+    "4_attributes": 1420,
+    "5_attributes": 166,
+    "6_attributes": 11,
+    "7_attributes": 1
+  }
+}

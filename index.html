@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPunk NFT Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">CryptoPunk NFT Generator</h1>
+                <p class="subtitle">Create unique pixel art characters by combining different layers</p>
+                <div class="generation-counter">
+                    <span class="counter-label">Generated:</span>
+                    <span class="counter-value" id="generationCounter">0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Left Sidebar - Layer Controls -->
+            <aside class="left-sidebar">
+                <h2 class="sidebar-title">Layer Controls</h2>
+                
+                <div class="layer-section">
+                    <label class="layer-label">Base Type</label>
+                    <select class="layer-select" id="baseType">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Zombie">Zombie</option>
+                        <option value="Ape">Ape</option>
+                        <option value="Alien">Alien</option>
+                    </select>
+                </div>
+
+                <div class="layer-section">
+                    <label class="layer-label">Skin Tone</label>
+                    <select class="layer-select" id="skinTone">
+                        <option value="Light">Light</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Albino">Albino</option>
+                        <option value="Green">Green</option>
+                        <option value="Brown">Brown</option>
+                        <option value="Blue">Blue</option>
+                    </select>
+                </div>
+
+                <div class="layer-section">
+                    <label class="layer-label">Hair Style</label>
+                    <select class="layer-select" id="hairStyle">
+                        <option value="None">None</option>
+                        <option value="Mohawk">Mohawk</option>
+                        <option value="Wild Hair">Wild Hair</option>
+                        <option value="Messy Hair">Messy Hair</option>
+                        <option value="Blonde Bob">Blonde Bob</option>
+                        <option value="Red Mohawk">Red Mohawk</option>
+                        <option value="Purple Hair">Purple Hair</option>
+                        <option value="Vampire Hair">Vampire Hair</option>
+                        <option value="Crazy Hair">Crazy Hair</option>
+                        <option value="Frumpy Hair">Frumpy Hair</option>
+                        <option value="Wild White Hair">Wild White Hair</option>
+                    </select>
+                </div>
+
+                <div class="layer-section">
+                    <label class="layer-label">Eye Accessories</label>
+                    <select class="layer-select" id="eyeAccessories">
+                        <option value="None">None</option>
+                        <option value="3D Glasses">3D Glasses</option>
+                        <option value="VR Headset">VR Headset</option>
+                        <option value="Regular Shades">Regular Shades</option>
+                        <option value="Classic Shades">Classic Shades</option>
+                        <option value="Big Shades">Big Shades</option>
+                        <option value="Nerd Glasses">Nerd Glasses</option>
+                        <option value="Small Shades">Small Shades</option>
+                        <option value="Eye Patch">Eye Patch</option>
+                    </select>
+                </div>
+
+                <div class="layer-section">
+                    <label class="layer-label">Facial Hair</label>
+                    <select class="layer-select" id="facialHair">
+                        <option value="None">None</option>
+                        <option value="Big Beard">Big Beard</option>
+                        <option value="Normal Beard">Normal Beard</option>
+                        <option value="Mustache">Mustache</option>
+                        <option value="Goat">Goat</option>
+                        <option value="Luxurious Beard">Luxurious Beard</option>
+                        <option value="Muttonchops">Muttonchops</option>
+                        <option value="Shadow Beard">Shadow Beard</option>
+                        <option value="Chinstrap">Chinstrap</option>
+                    </select>
+                </div>
+
+                <div class="layer-section">
+                    <label class="layer-label">Mouth Items</label>
+                    <select class="layer-select" id="mouthItems">
+                        <option value="None">None</option>
+                        <option value="Cigarette">Cigarette</option>
+                        <option value="Pipe">Pipe</option>
+                        <option value="Smile">Smile</option>
+                        <option value="Frown">Frown</option>
+                        <option value="Medical Mask">Medical Mask</option>
+                        <option value="Vape">Vape</option>
+                    </select>
+                </div>
+
+                <div class="layer-section">
+                    <label class="layer-label">Head Accessories</label>
+                    <select class="layer-select" id="headAccessories">
+                        <option value="None">None</option>
+                        <option value="Beanie">Beanie</option>
+                        <option value="Top Hat">Top Hat</option>
+                        <option value="Cowboy Hat">Cowboy Hat</option>
+                        <option value="Cap">Cap</option>
+                        <option value="Hoodie">Hoodie</option>
+                        <option value="Headband">Headband</option>
+                        <option value="Tiara">Tiara</option>
+                        <option value="Bandana">Bandana</option>
+                        <option value="Knitted Cap">Knitted Cap</option>
+                    </select>
+                </div>
+
+                <div class="layer-section">
+                    <label class="layer-label">Accessories</label>
+                    <select class="layer-select" id="accessories">
+                        <option value="None">None</option>
+                        <option value="Earring">Earring</option>
+                        <option value="Gold Chain">Gold Chain</option>
+                        <option value="Silver Chain">Silver Chain</option>
+                        <option value="Choker">Choker</option>
+                    </select>
+                </div>
+            </aside>
+
+            <!-- Center - Canvas Area -->
+            <main class="canvas-area">
+                <div class="canvas-container">
+                    <canvas id="characterCanvas" width="480" height="480"></canvas>
+                </div>
+                
+                <!-- Attribute Display -->
+                <div class="attribute-display">
+                    <h3 class="attribute-title">Current Attributes</h3>
+                    <div class="attribute-list" id="attributeList"></div>
+                    <div class="rarity-info">
+                        <span class="rarity-label">Rarity:</span>
+                        <span class="rarity-value" id="rarityValue">-</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Sidebar - Action Buttons -->
+            <aside class="right-sidebar">
+                <h2 class="sidebar-title">Actions</h2>
+                
+                <button class="action-btn primary" id="generateRandomBtn">
+                    <span class="btn-icon">🎲</span>
+                    Generate Random
+                </button>
+                
+                <button class="action-btn secondary" id="clearAllBtn">
+                    <span class="btn-icon">🗑️</span>
+                    Clear All
+                </button>
+                
+                <button class="action-btn success" id="downloadPngBtn">
+                    <span class="btn-icon">💾</span>
+                    Download PNG
+                </button>
+                
+                <button class="action-btn special" id="saveCollectionBtn">
+                    <span class="btn-icon">⭐</span>
+                    Save to Collection
+                </button>
+            </aside>
+        </div>
+
+        <!-- Collection Gallery -->
+        <section class="collection-gallery">
+            <h2 class="gallery-title">Your Collection <span class="collection-count" id="collectionCount">(0/10)</span></h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="empty-gallery">No characters saved yet. Create and save your first character!</div>
+            </div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
